@@ -1,18 +1,19 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+  <!-- <RefAndComputed></RefAndComputed> -->
+  <Relative></Relative>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
-import HelloWorld from './components/HelloWorld.vue';
-
-export default defineComponent({
+// import RefAndComputed from './components/01-refANDcomputed.vue'
+import Relative from './components/02-relative.vue'
+export default {
   name: 'App',
   components: {
-    HelloWorld
+    // RefAndComputed,
+    Relative
   }
-});
+}
 </script>
 
 <style>

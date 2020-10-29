@@ -1,8 +1,9 @@
 <template>
-    <teleport to='#modal'>
+    <teleport to="#modal">
         <div class="main">
             <div class="main-modal">
-                <h1>This is modal</h1>
+                <slot>This is Modal</slot>
+                <button @click="handleModalClose()">❎close</button>
             </div>
         </div>
     </teleport>
@@ -11,7 +12,20 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 export default defineComponent({
-    name: "CompositionApi02",
+    name: "Modal",
+    // *Vue3中新增加 emits 声明 直观的显示向父组件传递的事件
+    emits: {
+        'modal-close': null
+    },
+    setup(props, context) {
+        const handleModalClose = () => {
+            // *相当于 Vue2中的 this.$emit方法
+            context.emit('modal-close')
+        }
+        return {
+            handleModalClose
+        }
+    }
 });
 </script>
 
@@ -30,5 +44,6 @@ export default defineComponent({
     height: 400px;
     background-color: #ffffff;
     border: 5px solid #ccc;
+    text-align: center;
 }
 </style>

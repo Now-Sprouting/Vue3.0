@@ -5,8 +5,9 @@
   <!-- <Proxy></Proxy> -->
   <!-- <vue-3-left-style></vue-3-left-style> -->
   <!-- <watch></watch> -->
-  <CompositionApi01></CompositionApi01>
-
+  <!-- <CompositionApi01></CompositionApi01> -->
+  <CompositionApi02></CompositionApi02>
+  <Module></Module>
 </template>
 
 <script lang="ts">
@@ -15,7 +16,10 @@
 // import Proxy from './components/03-解决Vue2对象数组部分操作无法响应式问题.vue'
 // import Vue3LeftStyle from './components/04-vue3生命周期.vue'
 // import Watch from './components/05-watch.vue'
-import CompositionApi01 from './components/06-composition-api-追踪鼠标点击.vue'
+// import CompositionApi01 from './components/06-composition-api-追踪鼠标点击.vue'
+import  CompositionApi02 from './components/07-composition-api-全局loading插件.vue'
+import  Module from './components/08-瞬间移动-telport的使用.vue'
+
 export default {
   name: 'App',
   components: {
@@ -24,7 +28,9 @@ export default {
     // Proxy,
     // Vue3LeftStyle,
     // Watch
-    CompositionApi01
+    // CompositionApi01,
+    CompositionApi02,
+    Module
   }
 }
 </script>

@@ -1,6 +1,8 @@
 <template>
-    <h1>X坐标 : {{ x }}</h1>
-    <h1>Y坐标 : {{ y }}</h1>
+    <div>
+        <h1>X坐标 : {{ x }}</h1>
+        <h1>Y坐标 : {{ y }}</h1>
+    </div>
 </template>
 
 
